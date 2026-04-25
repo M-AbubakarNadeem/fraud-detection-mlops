@@ -40,4 +40,4 @@ An end-to-end MLOps pipeline for detecting fraudulent financial transactions usi
 - **Grafana**: `http://localhost:3000` (admin/admin)
 
 ## ⚖️ License
-Academic Project - Semester 8 MLOps Assignment.
+MIT License. Feel free to use and contribute!
