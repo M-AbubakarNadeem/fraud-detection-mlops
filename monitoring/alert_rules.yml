@@ -1,0 +1,20 @@
+groups:
+  - name: FraudSystemAlerts
+    rules:
+      - alert: HighLatency
+        expr: http_request_duration_seconds_sum / http_request_duration_seconds_count > 0.01
+        for: 1s
+        labels:
+          severity: warning
+        annotations:
+          summary: "High API Latency detected"
+          description: "Average latency is above 0.01s."
+
+      - alert: HighFraudRate
+        expr: rate(fraud_predictions_total{prediction_type="fraud"}[1m]) > 0.1
+        for: 1s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Zero Fraud Predictions"
+          description: "No fraud cases detected in the last 5 minutes. Possible model drift or system error."

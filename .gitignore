@@ -1,0 +1,15 @@
+.venv/
+.pip-cache/
+__pycache__/
+*.pyc
+
+# MLFlow
+mlruns/
+
+# Data and Models
+data/
+models/
+plots/
+
+# Logs
+*.log
